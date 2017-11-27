@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'restaurants/index'
+
 
   get '/'=> 'home#top'
   get 'about' => 'home#about'
