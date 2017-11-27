@@ -20,7 +20,10 @@ test:
   <<: *default
   database: db/test.sqlite3
 
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
-end
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: d8a37dnljnmdra
+  port: 5432
+  username: lsldlfqikauaau
+  password: 0730445f61a3a2366f5ae75dc7424cb5942af056ece0bff2264d1f873196e485
