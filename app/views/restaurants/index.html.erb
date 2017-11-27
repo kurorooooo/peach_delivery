@@ -1,0 +1,17 @@
+
+
+<div class="main posts-index">
+  <div class="container">
+
+
+      <%  @restaurants.each do |restaurant| %>
+
+      <div class="posts-index-item">
+      <%= link_to(restaurant.content, "/restaurants/#{restaurant.id}") %>
+      </div>
+
+      <% end %>
+
+
+  </div>
+</div>
