@@ -27,3 +27,4 @@ production:
   port: 5432
   username: adbqzihkarwmln
   password: dd2072d75d2148ed64016f21c40458451b9cf41d4075df3ed81acd30c45952e2
+  hostname: ec2-54-221-212-208.compute-1.amazonaws.com
