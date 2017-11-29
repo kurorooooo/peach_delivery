@@ -28,8 +28,7 @@
         <div class="btn-wrapper">
           <div class="btn signup"><%= link_to("新規登録はこちら", "/signup") %></div>
           <!--<p>or sign up with</p>
-          <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
-          <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>-->
+          -->
 
         </div>
       </div>
@@ -39,33 +38,34 @@
       <div class="container">
         <div class="heading">
           <h2>Restaurants Partners</h2>
+          <p>つくデリパートナーは厳正な審査によって選ばれています。</p>
         </div>
         <div class="lessons">
           <div class="lesson">
             <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/html.png">
-              <p>Indian Curry</p>
+              <img src="">
+              <p>I</p>
             </div>
             <p class="txt-contents">創立20周年を迎える老舗のカレー屋さんです。スパイスが自慢チキンカレーが評判</p>
           </div>
           <div class="lesson">
             <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-              <p>Chinese cuisine</p>
+              <img src="">
+              <p>C</p>
             </div>
             <p class="txt-contents"> 茨城で食べたい中華ランキングNo1にも選ばれる名店。中でも麻婆豆腐は逸脱。</p>
           </div>
           <div class="lesson">
             <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/ruby.png">
-              <p>Korean Cuisine</p>
+              <img src="">
+              <p>K</p>
             </div>
             <p class="txt-contents">１０年以上にも修行を終え店主がのれんわけを許され、県南初出店のブラックスター。</p>
           </div>
           <div class="lesson">
             <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/php.png">
-              <p>Mexican Cuisine</p>
+              <img src="">
+              <p>M</p>
             </div>
             <p class="txt-contents">筑波大学への留学を機に日本へ食の文化を広げたいと創業を決意。タコスは大人気の商品。</p>
           </div>
@@ -84,6 +84,8 @@
     </div>
     <footer>
       <div class="container">
+        <a href="https://www.facebook.com/TsukubaDelivery/" class="btn facebook"><span class="fa fa-facebook"></span>Facebook</a>
+        <a href="https://twitter.com/TsukubaDelivery" class="btn twitter"><span class="fa fa-twitter"></span>Twitter</a>
         <img src="">
         <p>Easy order, New neighbors!</p>
       </div>
@@ -109,20 +111,24 @@ a {
 
 .top-wrapper {
   padding: 180px 0 100px 0;
-  background-image: url(https://prog-8.com/images/html/advanced/top.png);
+  background-image: url("/food-eating.jpg");
   background-size: cover;
   color: white;
-  text-align: center;
+  text-align: center
 }
 
 .top-wrapper h1 {
-  opacity: 0.7;
+  opacity: 0.95;
   font-size: 45px;
   letter-spacing: 3px;
 }
 
 .top-wrapper h2 {
-  opacity: 0.7;
+  opacity: 0.8;
+}
+
+.top-wrapper p {
+  font-weight: bold;
 }
 
 .btn-wrapper {
