@@ -3,23 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /* posts/index ================================ */
 .posts-index-item {
-  padding: 80px 110px;
+  padding: 100px 110px 100px 110px;
   background-color: white;
   overflow: hidden;
   box-shadow: 0 2px 6px #c1ced7;
 }
 
-.posts-index-item h2 {
-  font-size: 30px;
+
+.restaurants-index p {
+  font-size: 50px;
 }
 
-.post-left img {
-  width: 100px;
-  height: 100px;
-  border-radius: 20%;
-  box-shadow: 0 2px 6px #c1ced7;
-  object-fit: cover;
-}
 
 .post-user-name a {
   font-weight: 600;
@@ -36,7 +30,7 @@
 
 .post-right {
   float: left;
-  width: 90%;
+  width: 10%;
   padding-left: 25px;
   text-align: left;
 }

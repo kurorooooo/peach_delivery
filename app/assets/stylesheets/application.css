@@ -24,3 +24,21 @@
    /* z-indexを10に指定してください */
    z-index: 10;
  }
+
+ footer img {
+   width: 125px;
+ }
+
+ footer p {
+   color: #b3aeb5;
+   font-size: 12px;
+ }
+
+ footer {
+   padding-top: 80px;
+   background-color: white;
+ }
+
+ footer .container {
+   font-color: white;
+ }

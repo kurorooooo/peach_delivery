@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<div class="main posts-show">
-  <div class="container">
-
-      <p><%= @restaurant.content %></p>
-      <img src=<%= @restaurant.image_name %> >
 
 
-  </div>
+<%  @restaurants.each do |restaurant| %>
+
+<div class="posts-index-item">
+<div class ="restaurants-index"><p><%= link_to(restaurant.content, "/restaurants/#{restaurant.id}") %></p></div>
+<img src=<%= restaurant.image_name %> >
 </div>
+
+<% end %>

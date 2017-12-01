@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PeachDelivery</title>
+    <title>Tsukuba Delivery</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -31,6 +31,17 @@
 
       </ul>
     </header>
+
     <%= yield %>
+
+    <footer>
+      <div class="container">
+        <a href="https://www.facebook.com/TsukubaDelivery/" class="btn facebook"><span class="fa fa-facebook"></span>Facebook</a>
+        <a href="https://twitter.com/TsukubaDelivery" class="btn twitter"><span class="fa fa-twitter"></span>Twitter</a>
+        <img src="">
+        <p>Easy order, New neighbors!</p>
+      </div>
+    </footer>
   </body>
+
 </html>
