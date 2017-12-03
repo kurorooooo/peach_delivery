@@ -10,7 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171201155521) do
+ActiveRecord::Schema.define(version: 20171203053624) do
+
+  create_table "peaches", force: :cascade do |t|
+    t.integer "restaurant_id"
+    t.string "delivery_time"
+    t.string "required_price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["restaurant_id"], name: "index_peaches_on_restaurant_id"
+  end
+
+  create_table "places", force: :cascade do |t|
+    t.text "name"
+    t.text "address"
+    t.integer "phone_number"
+    t.text "email"
+    t.text "url"
+    t.text "image_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "restaurants", force: :cascade do |t|
     t.text "content"

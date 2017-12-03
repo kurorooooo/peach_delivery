@@ -1,0 +1,32 @@
+<%= form_with(model: peach, local: true) do |form| %>
+  <% if peach.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(peach.errors.count, "error") %> prohibited this peach from being saved:</h2>
+
+      <ul>
+      <% peach.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :restaurant_id %>
+    <%= form.text_field :restaurant_id, id: :peach_restaurant_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :delivery_time %>
+    <%= form.text_field :delivery_time, id: :peach_delivery_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :required_price %>
+    <%= form.text_field :required_price, id: :peach_required_price %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
