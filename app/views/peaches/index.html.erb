@@ -17,7 +17,7 @@
 
 <div class="posts-index-item">
 <div class ="restaurants-index"><p><%= link_to(restaurant.content, "/restaurants/index/peaches/menu_of_milas") %></p></div>
-<img src=<%= restaurant.image_name %> >
+<%= link_to image_tag(restaurant.image_name, { :border => '0', :alt => '新規登録'}), "/restaurants/index/peaches/menu_of_milas" %>
 <p><%= restaurant.summary %></p>
 <div class="btn-wrapper">
   <div class="btn signup"><%= link_to("ここにする", "/restaurants/index/peaches/menu_of_milas") %></div>
