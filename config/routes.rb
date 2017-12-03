@@ -12,5 +12,9 @@ Rails.application.routes.draw do
   get 'restaurants/index' => 'restaurants#index'
 
   get 'restaurants/:id' => 'restaurants#show'
+  get 'restaurants/index/peaches' => 'peaches#index'
+  get 'restaurants/index/peaches/menu_of_milas' => 'peaches#menu_of_milas'
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
