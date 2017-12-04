@@ -1,2 +1,4 @@
 class MenuOfMila < ApplicationRecord
+
+
 end
