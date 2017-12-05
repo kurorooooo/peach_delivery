@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
-  resources :products
+  
+
+  resources :places do
+    resources :restaurants
+  end
+
+  get 'places/index' => 'places#index'
+  get 'places/:id' => 'places#show'
+
+  get 'places/:place_id/restaurants' => 'restaurants#index'
+
   post 'users/create' => 'users/create'
   get 'signup' => 'users#new'
   get 'users/index' => 'users#index'
@@ -23,6 +33,8 @@ Rails.application.routes.draw do
   post '/add_item' => 'carts#add_item'
   post '/update_item' => 'carts#update_item'
   delete '/delete_item' => 'carts#delete_item'
+
+  get 'places/index' => 'places#index'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

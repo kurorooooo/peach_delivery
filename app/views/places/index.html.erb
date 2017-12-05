@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+
+<div class="top-wrapper">
+  <div class="container">
+    <h1>1.受取スペースを<br >選びましょう。</h1>
+    <h2></h2>
+    <p></p>
+
+      <!--<p>or sign up with</p>
+      -->
+
+    </div>
+  </div>
+
+
+<div class="lesson-wrapper">
+  <div class="container">
+    <div class="heading">
+      <% @places.each do |place| %>
+      <%= @place.name %>
+      <%= link_to image_tag(@place.image_name, { :border => '0', :alt => '新規登録'}), "/places/:place_id/restaurants" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+    <div class="btn-wrapper">
+      <div class="btn signup"><%= link_to("ここにする", "/places/:place_id/restaurants") %></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="message-wrapper">
+  <div class="container">
+    <div class="heading">
+      <% @places.each do |place| %>
+      <%= place.name %>
+      <%= link_to image_tag(@place.image_name, { :border => '0', :alt => '新規登録'}), "/places/:id/restaurants" %>
+      <% end %>
+
+    </div>
+
+  </div>
+</div>
+
+<!--
+
+-->

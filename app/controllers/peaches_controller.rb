@@ -13,16 +13,9 @@ class PeachesController < ApplicationController
 
   end
 
-  def add_item
-    @cart = Cart.New(name: params[:name], quantity: params[:quantity])
 
-    @cart.save
-    redirect_to("/")
-  end
 
-  def form_for
-    @cart = Cart.New
-  end
+
 
 
   private def find_cart
