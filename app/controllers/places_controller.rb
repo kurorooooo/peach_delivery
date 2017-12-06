@@ -5,7 +5,7 @@ class PlacesController < ApplicationController
   end
 
   def show
-
+    @place = Place.find_by(id: params[:id])
     @shops = Place.find_by(id: params[:id]).shops
 
 

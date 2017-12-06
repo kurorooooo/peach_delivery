@@ -1,6 +1,8 @@
+<!DOCTYPE html>
+
 <div class="top-wrapper">
   <div class="container">
-    <h1>2.店舗を選びましょう。</h1>
+    <h1>3.料理を選びましょう</h1>
     <h2></h2>
     <p></p>
 
@@ -9,21 +11,27 @@
 
     </div>
   </div>
-</div>
-
-<%  @shops.each do |shop| %>
-
 
   <div class="posts-index-item">
-  <div class ="restaurants-index"><p><%= link_to(shop.name, "/shops/#{shop.id}") %></p></div>
-  <img src=<%= shop.image_name %> >
-  <p><%= shop.detail %></p>
-  <div class="btn-wrapper">
-  <div class="btn signup"><%= link_to("ここにする", "/shops/#{shop.id}") %></div>
-  </div>
-  </div>
+  <div class ="menu-index">
 
+<% @shops.each do |shop| %>
+<h1><%= shop.name %></h1>
+<img src= ><br >
+<p>￥</p>
+<p></p>
+
+  <%= form_tag("/") do %>
+
+
+  <% end %>
 <% end %>
+
+
+
+
+</div>
+</div>
 
 <style>
 body {
@@ -35,6 +43,9 @@ a {
   text-decoration: none;
 }
 
+.menu-index p {
+  font-size: 20px;
+}
 .container {
   width: 1170px;
   padding: 0 15px;
@@ -59,9 +70,6 @@ a {
   opacity: 0.8;
 }
 
-.top-wrapper p {
-  font-weight: bold;
-}
 
 .btn-wrapper {
   margin: 20px 0;

@@ -6,8 +6,12 @@ Rails.application.routes.draw do
   get '/'=> 'home#top'
 
   get 'places' => 'places#index'
-  
+
   get 'places/:id' => 'places#show'
+
+  get 'shops/index' => 'shops#index'
+  get 'shops/:id' => 'shops#show'
+
 
 
 
