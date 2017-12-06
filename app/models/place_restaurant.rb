@@ -1,2 +1,1 @@
-class PlaceRestaurant < ApplicationRecord
-end
+

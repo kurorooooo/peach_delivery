@@ -5,10 +5,20 @@ class PlacesController < ApplicationController
   end
 
   def show
-    @place = Place.find_by(id: params[:id])
-    @restaurants = Restaurant.where(place_id: params[:place_id])
+
+    @shops = Place.find_by(id: 1).shops
+
+
+
+
+
   end
 
+  private
+
+  def params_place
+    params.require(:place).permit(:name, :body)
+  end
 
 
 end

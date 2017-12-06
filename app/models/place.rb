@@ -1,3 +1,7 @@
 class Place < ApplicationRecord
-  has_and_belongs_to_many :restaurants
+  has_many :place_shops
+  has_many :shops, through: :place_shops
+
+
+
 end
