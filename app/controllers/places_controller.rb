@@ -6,7 +6,7 @@ class PlacesController < ApplicationController
 
   def show
 
-    @shops = Place.find_by(id: 1).shops
+    @shops = Place.find_by(id: params[:id]).shops
 
 
 
