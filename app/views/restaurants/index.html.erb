@@ -17,6 +17,7 @@
 <div class ="restaurants-index"><p><%= link_to(restaurant.content, "/") %></p></div>
 <img src=<%= restaurant.image_name %> >
 <p><%= restaurant.content %></p>
+<%= link_to image_tag(restaurant.image_name, "/places/:place_id/restaurants") %>
 <div class="btn-wrapper">
   <div class="btn signup"><%= link_to("ここにする", "/") %></div>
 </div>

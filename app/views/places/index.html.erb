@@ -13,16 +13,17 @@
     </div>
   </div>
 
-
+  <% @places.each do |place| %>
 <div class="lesson-wrapper">
+
   <div class="container">
     <div class="heading">
-      <% @places.each do |place| %>
+
       <h1><%= place.name %></h1>
       <p>つくば天久保２丁目にあるコワーキングスペース。<br >
         国際色豊かな運営スタッフや多様な企画が新しい。</p>
-      
-      <% end %>
+      <%= link_to image_tag(place.image_name), "/places/:place_id/restaurants") %>
+
 
       <div class="btn-wrapper">
         <div class="btn signup"><%= link_to("ここにする", "/places/:place_id/restaurants") %></div>
@@ -31,20 +32,13 @@
 </div>
 
 
+
     </div>
-  </div>
-</div>
+    <% end %>
 
 
-<div class="message-wrapper">
-  <div class="container">
-    <div class="heading">
-      <h2>いつもと違う、気になっていたあのお店に<br >注文してみましょう。</h2>
-      <h3>Easy order, New neighbors!</h3>
-    </div>
-    <span class="btn message"><%= link_to("さっそく注文する", "/places") %></span>
-  </div>
-</div>
+
+
 
 
 <style>
@@ -205,29 +199,6 @@ header {
   font-weight: normal;
 }
 
-.message-wrapper {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 80px;
-  text-align: center;
-
-}
-
-.message-wrapper h2 {
-  color: white;
-}
-
-.message {
-  padding: 15px 40px;
-  background-color: #5dca88;
-  cursor: pointer;
-  box-shadow: 0 7px #1a7940;
-}
-
-.message:active {
-  position: relative;
-  top: 7px;
-  box-shadow: none;
-}
 
 
 </style>
