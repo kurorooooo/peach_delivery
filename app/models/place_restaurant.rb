@@ -1,0 +1,2 @@
+class PlaceRestaurant < ApplicationRecord
+end

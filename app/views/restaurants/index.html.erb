@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-<body>
-
 <div class="top-wrapper">
   <div class="container">
-    <h1>1.受取スペースを<br >選びましょう。</h1>
+    <h1>2.店舗を選びましょう。</h1>
     <h2></h2>
     <p></p>
 
@@ -15,40 +11,18 @@
   </div>
 </div>
 
-<div class="lesson-wrapper">
-  <div class="container">
-    <div class="heading">
-      <h1>Global Incubation Cafe Peach</h1>
-      <p>つくば天久保２丁目にあるコワーキングスペース。<br >
-        国際色豊かな運営スタッフや多様な企画が新しい。</p>
-    </div>
-    <div class="place-image">
-      <%= link_to image_tag("/peach1.jpg", { :border => '0', :alt => '新規登録'}), "/restaurants/index/peaches" %>
-    </div>
-    <div class="btn-wrapper">
-      <div class="btn signup"><%= link_to("ここにする", "/restaurants/index/peaches") %></div>
-    </div>
-  </div>
+<%  @restaurants.each do |restaurant| %>
+
+<div class="posts-index-item">
+<div class ="restaurants-index"><p><%= link_to(restaurant.content, "/") %></p></div>
+<img src=<%= restaurant.image_name %> >
+<p><%= restaurant.content %></p>
+<div class="btn-wrapper">
+  <div class="btn signup"><%= link_to("ここにする", "/") %></div>
+</div>
 </div>
 
-
-<div class="message-wrapper">
-  <div class="container">
-    <div class="heading">
-      <h2>いつもと違う、気になっていたあのお店に<br >注文してみましょう。</h2>
-      <h3>Easy order, New neighbors!</h3>
-    </div>
-    <span class="btn message"><%= link_to("さっそく注文する", "/restaurants/index") %></span>
-  </div>
-</div>
-
-<!--
-
--->
-
-</body>
-</html>
-
+<% end %>
 
 <style>
 body {
@@ -72,7 +46,6 @@ a {
   background-size: cover;
   color: white;
   text-align: center
-
 }
 
 .top-wrapper h1 {
@@ -88,7 +61,6 @@ a {
 .top-wrapper p {
   font-weight: bold;
 }
-
 
 .btn-wrapper {
   margin: 20px 0;
@@ -127,133 +99,4 @@ a {
 .fa {
   margin-right: 5px;
 }
-
-header {
-  height: 65px;
-  width: 100%;
-  background-color: rgba(34, 49, 52, 0.9);
-  /* positionプロパティをfixedに、topを0に指定してください */
-  position: fixed;
-  top: 0;
-  /* z-indexを10に指定してください */
-  z-index: 10;
-}
-
-.logo {
-  width: 124px;
-  margin-top: 20px;
-}
-
-.header-left {
-  float: left;
-}
-
-.header-right {
-  float: right;
-  background-color: rgba(255, 255, 255, 0.3);
-  transition: all 0.5s;
-}
-
-.header-right:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.header-right a {
-  line-height: 65px;
-  padding: 0 25px;
-  color: white;
-  display: block;
-}
-
-.lesson-wrapper {
-  height: 500px;
-  padding-bottom: 80px;
-  background-color: #f7f7f7;
-  text-align: center;
-}
-
-.heading {
-  padding-top: 60px;
-  padding-bottom: 30px;
-  color: #5f5d60;
-}
-
-.heading h2 {
-  font-weight: normal;
-}
-
-.lesson {
-  float: left;
-  width: 25%;
-}
-
-.lesson-icon {
-  position: relative;
-}
-
-.lesson-icon p {
-  position: absolute;
-  top: 90px;
-  width: 100%;
-  color: white;
-}
-
-.lesson-wrapper {
-  height: 700px;
-}
-
-.txt-contents {
-  width: 80%;
-  display: inline-block;
-  margin-top: 20px;
-  font-size: 12px;
-  color: #b3aeb5;
-}
-
-.heading h3 {
-  font-weight: normal;
-}
-
-.message-wrapper {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 80px;
-  text-align: center;
-
-}
-
-.message-wrapper h2 {
-  color: white;
-}
-
-.message {
-  padding: 15px 40px;
-  background-color: #5dca88;
-  cursor: pointer;
-  box-shadow: 0 7px #1a7940;
-}
-
-.message:active {
-  position: relative;
-  top: 7px;
-  box-shadow: none;
-}
-
-footer img {
-  width: 125px;
-}
-
-footer p {
-  color: #b3aeb5;
-  font-size: 12px;
-}
-
-footer {
-  padding-top: 80px;
-  background-color: white;
-}
-
-footer .container {
-  font-color: white;
-}
-
 </style>

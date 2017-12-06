@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  
+
 
   resources :places do
     resources :restaurants
   end
 
-  get 'places/index' => 'places#index'
+  get 'places' => 'places#index'
   get 'places/:id' => 'places#show'
 
   get 'places/:place_id/restaurants' => 'restaurants#index'
